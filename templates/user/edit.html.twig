@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Edit profile
+{% endblock %}
+
+{% block body %}
+  {% for flashError in app.flashes('error') %}
+    <div class="alert alert-danger" role="alert">
+      {{ flashError }}
+    </div>
+  {% endfor %}
+
+  <h1>
+    Edit profile
+  </h1>
+  {{ form_start(editUserForm) }}
+  {{ form_row(editUserForm.username) }}
+  {{ form_row(editUserForm.email) }}
+  {{ form_row(editUserForm.agreeTerms) }}
+
+  <button type="submit" class="btn">Edit</button>
+  {{ form_end(editUserForm) }}
+  <a href="{{ path('user_edit_password') }}">Change password</a>
+{% endblock %}
