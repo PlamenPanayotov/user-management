@@ -8,10 +8,15 @@ Download the code. Open new terminal and install [Symfony](https://symfony.com/)
 composer install
 
 ```
-Set your database in .env file.
+Configure your database in .env file.
 
 ```bash
 DATABASE_URL=mysql://user:password@127.0.0.1:3306/db_name
+```
+
+Configure MAILER_DSN:
+```bash
+MAILER_DSN=smtp://user:pass@smtp.example.com:port
 ```
 
 ## Crud operations
