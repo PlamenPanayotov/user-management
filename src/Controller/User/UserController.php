@@ -33,7 +33,7 @@ class UserController extends AbstractController
     public function profile()
     {
         $user = $this->userService->currentUser();
-        $isVerified = $user->isVerified();
+        $isVerified = $this->userService->isVerified();
         return $this->render('user/profile.html.twig', [
             'user' => $user,
             'isVerified' => $isVerified

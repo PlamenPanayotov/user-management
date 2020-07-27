@@ -12,6 +12,11 @@
   </style>
 
   <div class="example-wrapper">
+    {% if isVerified == false %}
+      <h2>
+        Please check your email and click the link to confirm your registration.
+      </h2>
+    {% endif %}
     {% if app.user %}
       <h1>
         Hello {{ app.user.username }}! ✅
